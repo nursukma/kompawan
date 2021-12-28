@@ -1,7 +1,7 @@
 version: "3"
 services:
     web:
-        image: nursukma/aksens-webserver:latest
+        image: nursukma/kompawan:latest
         container_name: web
         restart: unless-stopped
         ports:

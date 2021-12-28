@@ -1,6 +1,6 @@
 FROM php:7.4-apache
 
-WORKDIR /var/www/aksens-webserver
+WORKDIR /var/www/kompawan
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
@@ -28,11 +28,11 @@ RUN composer install --no-autoloader --no-scripts --no-dev
 
 COPY docker/ /
 RUN a2enmod rewrite headers \
-    && a2ensite aksens-webserver \
+    && a2ensite kompawan \
     && a2dissite 000-default \
-    && chmod +x /usr/local/bin/docker-aksens-webserver-entrypoint
+    && chmod +x /usr/local/bin/docker-kompawan-entrypoint
 
-COPY . /var/www/aksens-webserver
+COPY . /var/www/kompawan-webserver
 RUN composer install --optimize-autoloader --no-dev
 
-CMD ["docker-aksens-webserver-entrypoint"]
+CMD ["docker-kompawan-entrypoint"]
