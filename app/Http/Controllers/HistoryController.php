@@ -53,6 +53,7 @@ class HistoryController extends Controller
         $products_id = $request->products_id;
         $products_name = $request->products_name;
         $products_price = $request->products_price;
+        $products_photo = $request->photo;
         $amount = $request->amount;
         $total = $request->total;
         $discount = $request->discount;
@@ -63,6 +64,7 @@ class HistoryController extends Controller
             $objModel->products_id = $products_id[$i];
             $objModel->products_name = $products_name[$i];
             $objModel->products_price = $products_price[$i];
+            $objModel->photo = $products_photo[$i];
             $objModel->amount = $amount[$i];
             $objModel->total = $total[$i];
             $objModel->discount = $discount[$i];
@@ -76,7 +78,7 @@ class HistoryController extends Controller
             $tabelSell->users_id = $user_id;
             $tabelSell->users_name = $user_name;
             $tabelSell->total_price = $total_price;
-            $tabelSell->photo = "";
+            $tabelSell->photo = $products_photo;
             $tabelSell->status = "";
             $tabelSell->parameter = $parameter;
             $tabelSell->save();

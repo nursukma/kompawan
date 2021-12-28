@@ -47,6 +47,7 @@ class DetailController extends Controller
             'products_id'=>'required|integer',
             'products_name'=>'required|string',
             'products_price'=>'required|integer',
+            'photo'=>'max:255',
             'amount'=>'required|integer',
             'total'=>'required|integer',
             'users_id'=>'required|integer',

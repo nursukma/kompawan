@@ -50,7 +50,7 @@
         {data: 'users_name',name: 'users_name'},
         {data: 'total_price',name: 'total_price'},
         {data: 'photo',name: 'photo', render: function (data, type, full, meta) {
-        return "<img src='/images/" + data + "' width='100px;'/>";
+          return "<img src=\"/images/" + data + "\" width=\"100px\"/>";
         }},
         {data: 'status',name: 'status'},
         {data: 'action',name: 'action'}
@@ -69,7 +69,7 @@
         {data: 'users_name',name: 'users_name'},
         {data: 'total_price',name: 'total_price'},
         {data: 'photo',name: 'photo', render: function (data, type, full, meta) {
-        return "<img src='/images/" + data + "' width='100px;'/>";
+          return "<img src=\"/images/" + data + "\" width=\"100px\"/>";
         }},
         {data: 'status',name: 'status'},
         {data: 'action',name: 'action'}
