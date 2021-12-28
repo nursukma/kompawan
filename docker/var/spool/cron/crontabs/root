@@ -1,0 +1,1 @@
+* * * * * /usr/local/bin/php /var/www/kompawan/artisan schedule:run
