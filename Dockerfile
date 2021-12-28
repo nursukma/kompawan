@@ -32,7 +32,7 @@ RUN a2enmod rewrite headers \
     && a2dissite 000-default \
     && chmod +x /usr/local/bin/docker-kompawan-entrypoint
 
-COPY . /var/www/kompawan-webserver
+COPY . /var/www/kompawan
 RUN composer install --optimize-autoloader --no-dev
 
 CMD ["docker-kompawan-entrypoint"]
