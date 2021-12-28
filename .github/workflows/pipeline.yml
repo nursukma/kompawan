@@ -41,7 +41,7 @@ jobs:
       - name: 'Build and push'
         run: |
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/kompawan .
-          docker push ${{ secrets.DOCKERHUB_USERNAME}}/kompawan
+          docker push ${{ secrets.DOCKERHUB_USERNAME}}/kompawan:latest
 
       - name: 'Write config'
         run: |
