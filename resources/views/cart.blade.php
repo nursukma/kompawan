@@ -28,6 +28,6 @@
     </div>
     @endforeach
     <div class="alert alert-danger float-right col-md-6 col-sm-9 col-lg-3">
-        <span><b> Total : {{$carts->sum('total')}}   </b></span>
+        <span><b> Total : {{$carts->sum('total')}} </b></span>
     </div>
 </div>
